@@ -1,4 +1,4 @@
-package com.example.client;
+package com.example.items;
 
 import com.example.ExampleMod;
 import net.minecraft.core.registries.Registries;

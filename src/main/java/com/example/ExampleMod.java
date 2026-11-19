@@ -1,8 +1,12 @@
 package com.example;
 
 import com.example.modwok.ModItems;
+import com.example.recipes.BreadedChickenCutsRecipe;
+import com.example.recipes.TestRecipe;
 import net.fabricmc.api.ModInitializer;
-
+import net.fabricmc.fabric.api.recipe.v1.sync.RecipeSynchronization;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
@@ -23,6 +27,15 @@ public class ExampleMod implements ModInitializer {
 		// Proceed with mild caution.
 		ModItems.initialize();
 		LOGGER.info("Hello Fabric world!");
+
+		ModItems.initialize();
+
+//		Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, ExampleMod.id("breaded_chicken_cut"), BreadedChickenCutsRecipe.SERIALIZER);
+//		RecipeSynchronization.synchronizeRecipeSerializer(BreadedChickenCutsRecipe.SERIALIZER);
+
+		Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, ExampleMod.id("breaded_chicken_cut"), TestRecipe.SERIALIZER);
+		RecipeSynchronization.synchronizeRecipeSerializer(TestRecipe.SERIALIZER);
+
 	}
 
 	public static Identifier id(String path) {
