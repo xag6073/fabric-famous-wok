@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.modwok.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -20,7 +21,7 @@ public class ExampleMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-
+		ModItems.initialize();
 		LOGGER.info("Hello Fabric world!");
 	}
 
