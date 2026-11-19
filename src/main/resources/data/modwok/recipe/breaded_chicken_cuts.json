@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     "farmersdelight:chicken_cuts",
-    "modid:breadcrumbs",
+    "modwok:breadcrumbs",
     "minecraft:egg"
   ],
   "result": {
-    "id": "modid:breaded_chicken_cuts",
+    "id": "modwok:breaded_chicken_cuts",
     "count": 1
   }
 }

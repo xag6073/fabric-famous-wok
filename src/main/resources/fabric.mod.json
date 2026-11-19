@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.example.ModWok"
 		],
 		"client": [
 			"com.example.client.ExampleModClient"

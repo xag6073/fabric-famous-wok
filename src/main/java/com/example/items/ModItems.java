@@ -17,6 +17,9 @@ public class ModItems {
         // And register an event handler that adds our item to the ingredients group.
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.BREADED_CHICKEN_CUTS));
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.BREADCRUMBS));
     }
 
     public static final Item BREADED_CHICKEN_CUTS = register(
@@ -24,6 +27,13 @@ public class ModItems {
             Item::new,
             new Item.Properties().food(FoodValues.CHICKEN_CUTS)
     );
+
+    public static final Item BREADCRUMBS = register(
+            ModItemIds.BREADCRUMBS_KEY,
+            Item::new,
+            new Item.Properties()
+    );
+
 
     public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item instance.

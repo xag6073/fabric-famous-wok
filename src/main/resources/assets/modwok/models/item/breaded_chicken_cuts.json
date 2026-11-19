@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "modid:item/breaded_chicken_cuts"
+    "layer0": "modwok:item/breaded_chicken_cuts"
   }
 }

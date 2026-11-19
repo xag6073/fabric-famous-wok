@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "modid:item/breaded_chicken_cuts"
+    "model": "modwok:item/breaded_chicken_cuts"
   }
 }
