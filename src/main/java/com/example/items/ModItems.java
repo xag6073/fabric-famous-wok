@@ -6,6 +6,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import vectorwing.farmersdelight.common.FoodValues;
 
 import java.util.function.Function;
 
@@ -21,7 +22,7 @@ public class ModItems {
     public static final Item BREADED_CHICKEN_CUTS = register(
             ModItemIds.BREADED_CHICKEN_CUTS,
             Item::new,
-            new Item.Properties()
+            new Item.Properties().food(FoodValues.CHICKEN_CUTS)
     );
 
     public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {

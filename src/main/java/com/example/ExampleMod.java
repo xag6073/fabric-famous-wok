@@ -32,9 +32,9 @@ public class ExampleMod implements ModInitializer {
 
 //		Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, ExampleMod.id("breaded_chicken_cut"), BreadedChickenCutsRecipe.SERIALIZER);
 //		RecipeSynchronization.synchronizeRecipeSerializer(BreadedChickenCutsRecipe.SERIALIZER);
-
-		Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, ExampleMod.id("breaded_chicken_cut"), TestRecipe.SERIALIZER);
-		RecipeSynchronization.synchronizeRecipeSerializer(TestRecipe.SERIALIZER);
+//
+//		Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, ExampleMod.id("breaded_chicken_cut"), TestRecipe.SERIALIZER);
+//		RecipeSynchronization.synchronizeRecipeSerializer(TestRecipe.SERIALIZER);
 
 	}
 
