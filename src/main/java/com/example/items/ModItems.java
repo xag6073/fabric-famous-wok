@@ -8,8 +8,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import vectorwing.farmersdelight.common.FoodValues;
+import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
+
+import static vectorwing.farmersdelight.common.registry.ModItems.bowlFoodItem;
 
 public class ModItems {
 
@@ -38,11 +42,9 @@ public class ModItems {
             new Item.Properties()
     );
 
-    public static final Item LO_MEIN = register(
-            ModItemIds.LO_MEIN_KEY,
-            Item::new,
-            new Item.Properties().food(ModWokFoodValues.LO_MEIN)
-    );
+    public static final Item LO_MEIN = register(ModItemIds.LO_MEIN_KEY,
+            properties -> new ConsumableItem(properties, true),
+            bowlFoodItem(ModWokFoodValues.LO_MEIN, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION));
 
     public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item instance.
