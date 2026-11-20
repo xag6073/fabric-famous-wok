@@ -1,5 +1,6 @@
 package com.example.items;
 
+import com.example.modwok.ModWokFoodValues;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -20,6 +21,9 @@ public class ModItems {
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.BREADCRUMBS));
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.LO_MEIN));
     }
 
     public static final Item BREADED_CHICKEN_CUTS = register(
@@ -34,6 +38,11 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final Item LO_MEIN = register(
+            ModItemIds.LO_MEIN_KEY,
+            Item::new,
+            new Item.Properties().food(ModWokFoodValues.LO_MEIN)
+    );
 
     public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item instance.
