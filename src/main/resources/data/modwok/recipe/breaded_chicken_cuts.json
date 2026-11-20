@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "farmersdelight:chicken_cuts",
+    "modwok:breadcrumbs",
+    "minecraft:egg"
+  ],
+  "result": {
+    "id": "modwok:breaded_chicken_cuts",
+    "count": 1
+  }
+}
