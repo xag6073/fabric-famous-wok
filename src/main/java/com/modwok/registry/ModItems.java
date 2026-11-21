@@ -1,4 +1,4 @@
-package com.example.items;
+package com.modwok.registry;
 
 import com.example.modwok.ModWokFoodValues;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
