@@ -1,5 +1,6 @@
 package com.example.items;
 
+import com.example.modwok.ModWokFoodValues;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -7,8 +8,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import vectorwing.farmersdelight.common.FoodValues;
+import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
+
+import static vectorwing.farmersdelight.common.registry.ModItems.bowlFoodItem;
 
 public class ModItems {
 
@@ -20,6 +25,9 @@ public class ModItems {
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.BREADCRUMBS));
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.LO_MEIN));
     }
 
     public static final Item BREADED_CHICKEN_CUTS = register(
@@ -34,6 +42,9 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final Item LO_MEIN = register(ModItemIds.LO_MEIN_KEY,
+            properties -> new ConsumableItem(properties, true),
+            bowlFoodItem(ModWokFoodValues.LO_MEIN, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION));
 
     public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item instance.

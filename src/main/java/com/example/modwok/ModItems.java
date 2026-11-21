@@ -29,12 +29,6 @@ public class ModItems {
         return item;
     }
 
-    public static final ResourceKey<Item> BREADCRUMBS_KEY =
-            createKey("breadcrumbs");
-
-    public static final Item BREADCRUMBS =
-            register(BREADCRUMBS_KEY);
-
     public static void initialize() {
         // Initializes the registered items.
     }
