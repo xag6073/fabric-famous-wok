@@ -1,13 +1,11 @@
-package com.example.recipes;
+package com.modwok.crafting;
 
-import com.example.items.ModItems;
+import com.modwok.registry.ModItems;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
-import net.minecraft.world.item.crafting.display.RecipeDisplay;
 import net.minecraft.world.level.Level;
 
 public class BreadedChickenCutsRecipe implements CraftingRecipe {

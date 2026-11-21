@@ -1,6 +1,6 @@
-package com.example;
+package com.modwok;
 
-import com.example.items.ModItems;
+import com.modwok.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.Identifier;
 

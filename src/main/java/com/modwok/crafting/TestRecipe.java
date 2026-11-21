@@ -1,4 +1,4 @@
-package com.example.recipes;
+package com.modwok.crafting;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.network.RegistryFriendlyByteBuf;

@@ -1,6 +1,6 @@
-package com.example.items;
+package com.modwok.registry;
 
-import com.example.ModWok;
+import com.modwok.ModWok;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
