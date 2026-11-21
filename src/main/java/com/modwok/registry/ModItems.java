@@ -1,6 +1,6 @@
 package com.modwok.registry;
 
-import com.example.modwok.ModWokFoodValues;
+import com.modwok.ModWokFoodValues;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,7 +11,6 @@ import vectorwing.farmersdelight.common.FoodValues;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 import static vectorwing.farmersdelight.common.registry.ModItems.bowlFoodItem;
 

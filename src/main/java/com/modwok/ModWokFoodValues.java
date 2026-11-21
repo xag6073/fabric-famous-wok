@@ -1,4 +1,4 @@
-package com.example.modwok;
+package com.modwok;
 
 import net.minecraft.world.food.FoodProperties;
 
