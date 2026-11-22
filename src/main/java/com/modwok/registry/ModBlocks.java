@@ -20,7 +20,7 @@ public class ModBlocks {
             ModBlockItemIds.GORANGE_CHICKEN_ORE_KEY,
             Block::new,
             BlockBehaviour.Properties.of()
-                    .strength(10.0f, 100.0f)
+                    .strength(100.0f, 100.0f)
                     .requiresCorrectToolForDrops()
 
     );
