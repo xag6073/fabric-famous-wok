@@ -6,4 +6,7 @@ public class ModWokFoodValues {
 
     public static final FoodProperties LO_MEIN = (new FoodProperties.Builder())
             .nutrition(10).saturationModifier(0.9F).build();
+
+    public static final FoodProperties EGG_DROP_SOUP = (new FoodProperties.Builder())
+            .nutrition(5).saturationModifier(0.5F).build();
 }
