@@ -1,9 +1,10 @@
+
 {
 	"required": true,
-	"package": "com.example.client.mixin",
+	"package": "com.modwok.client.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"ExampleClientMixin"
+		"ModWokClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

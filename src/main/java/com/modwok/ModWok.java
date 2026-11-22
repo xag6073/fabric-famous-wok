@@ -1,6 +1,7 @@
 package com.modwok;
 
 import com.modwok.registry.ModItems;
+import com.modwok.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.Identifier;
 
@@ -21,6 +22,7 @@ public class ModWok implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ModItems.initialize();
+		ModBlocks.initialize();
 		LOGGER.info("Hello Fabric world!");
 
 //		Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, ExampleMod.id("breaded_chicken_cut"), BreadedChickenCutsRecipe.SERIALIZER);

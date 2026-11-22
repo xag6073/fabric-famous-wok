@@ -27,6 +27,9 @@ public class ModItems {
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.LO_MEIN));
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.GORANGE_CHICKEN_NUG));
     }
 
     public static final Item BREADED_CHICKEN_CUTS = register(
@@ -44,6 +47,13 @@ public class ModItems {
     public static final Item LO_MEIN = register(ModItemIds.LO_MEIN_KEY,
             properties -> new ConsumableItem(properties, true),
             bowlFoodItem(ModWokFoodValues.LO_MEIN, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION));
+
+    // ORE DROPS
+    public static final Item GORANGE_CHICKEN_NUG = register(
+            ModItemIds.GORANGE_CHICKEN_NUG_KEY,
+            Item::new,
+            new Item.Properties().food(ModWokFoodValues.GORANGE_CHICKEN_NUG)
+    );
 
     public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item instance.

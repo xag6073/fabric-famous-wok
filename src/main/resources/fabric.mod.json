@@ -12,20 +12,22 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/modwok/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"com.modwok.ModWok"
 		],
 		"client": [
-			"com.example.client.ExampleModClient"
+			"com.modwok.client.ExampleModClient"
+		],
+		"fabric-datagen": [
+			"com.modwok.docs.datagen.ModWokDataGenerator"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "modwok.client.mixins.json",
 			"environment": "client"
 		}
 	],

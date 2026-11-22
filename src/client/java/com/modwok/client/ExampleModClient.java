@@ -1,4 +1,4 @@
-package com.example.client;
+package com.modwok.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
