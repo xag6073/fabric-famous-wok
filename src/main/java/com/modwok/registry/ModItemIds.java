@@ -13,6 +13,8 @@ public class ModItemIds {
 
     public static final ResourceKey<Item> LO_MEIN_KEY = create("lo_mein");
 
+    public static final ResourceKey<Item> EGG_DROP_SOUP_KEY = create("egg_drop_soup");
+
     public static ResourceKey<Item> create(String name) {
         // Create the item key.
         return ResourceKey.create(Registries.ITEM, ModWok.id(name));
