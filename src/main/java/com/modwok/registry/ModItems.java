@@ -16,34 +16,22 @@ import static vectorwing.farmersdelight.common.registry.ModItems.bowlFoodItem;
 
 public class ModItems {
 
-    public static void initialize() {
-        // Get the event for modifying entries in the ingredients group.
-        // And register an event handler that adds our item to the ingredients group.
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
-                .register((creativeTab) -> creativeTab.accept(ModItems.BREADED_CHICKEN_CUTS));
-
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
-                .register((creativeTab) -> creativeTab.accept(ModItems.BREADCRUMBS));
-
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                .register((creativeTab) -> creativeTab.accept(ModItems.LO_MEIN));
-
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                .register((creativeTab) -> creativeTab.accept(ModItems.GORANGE_CHICKEN_NUG));
-    }
-
+    // FOOD_AND_DRINKS & INGREDIENTS
+    public static final Item EGG_DROP_SOUP = register(
+            ModItemIds.EGG_DROP_SOUP_KEY,
+            Item::new,
+            new Item.Properties().food(ModWokFoodValues.EGG_DROP_SOUP, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION)
+    );
     public static final Item BREADED_CHICKEN_CUTS = register(
             ModItemIds.BREADED_CHICKEN_CUTS,
             Item::new,
             new Item.Properties().food(FoodValues.CHICKEN_CUTS)
     );
-
     public static final Item BREADCRUMBS = register(
             ModItemIds.BREADCRUMBS_KEY,
             Item::new,
             new Item.Properties()
     );
-
     public static final Item LO_MEIN = register(ModItemIds.LO_MEIN_KEY,
             properties -> new ConsumableItem(properties, true),
             bowlFoodItem(ModWokFoodValues.LO_MEIN, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION));
@@ -54,6 +42,25 @@ public class ModItems {
             Item::new,
             new Item.Properties().food(ModWokFoodValues.GORANGE_CHICKEN_NUG)
     );
+
+    public static void initialize() {
+        // Get the event for modifying entries in the ingredients group.
+        // And register an event handler that adds our item to the ingredients group.
+
+        // INGREDIENTS
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.BREADED_CHICKEN_CUTS));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.BREADCRUMBS));
+
+        // FOOD_AND_DRINKS
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.LO_MEIN));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.GORANGE_CHICKEN_NUG));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.EGG_DROP_SOUP));
+    }
 
     public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item instance.

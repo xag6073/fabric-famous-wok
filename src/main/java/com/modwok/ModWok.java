@@ -1,10 +1,14 @@
 package com.modwok;
 
+import com.modwok.docs.worldgen.ModWokWorldPlacedFeatures;
 import com.modwok.registry.ModItems;
 import com.modwok.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.resources.Identifier;
-
+import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +28,13 @@ public class ModWok implements ModInitializer {
 		ModItems.initialize();
 		ModBlocks.initialize();
 		LOGGER.info("Hello Fabric world!");
+
+		// Spawns in Mountain biomes only
+		BiomeModifications.addFeature(
+            BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN),
+            GenerationStep.Decoration.UNDERGROUND_ORES,
+            ModWokWorldPlacedFeatures.GORANGE_CHICKEN_ORE_VEIN_PLACED_FEATURE
+		);
 
 //		Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, ExampleMod.id("breaded_chicken_cut"), BreadedChickenCutsRecipe.SERIALIZER);
 //		RecipeSynchronization.synchronizeRecipeSerializer(BreadedChickenCutsRecipe.SERIALIZER);
