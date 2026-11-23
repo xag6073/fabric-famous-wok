@@ -30,13 +30,13 @@ public class ModWokBlockLootTableProvider extends FabricBlockLootSubProvider {
                 LootItem.lootTableItem(ModItems.GORANGE_CHICKEN_NUG)
                     .apply(SetItemCountFunction.setCount(ContextIntProviders.exactly(1)))
                         .apply(
-                                SetItemCountFunction.setCount(ContextIntProviders.exactly(2))
-                                        .when(Holder.direct(
-                                                BonusLevelTableCondition.bonusLevelFlatChance(
-                                                        this.enchantments.getOrThrow(Enchantments.FORTUNE),
-                                                        0.0F, 0.05F, 0.10F, 0.20F
-                                                ).build()
-                                        ))
+                            SetItemCountFunction.setCount(ContextIntProviders.exactly(2))
+                                .when(Holder.direct(
+                                    BonusLevelTableCondition.bonusLevelFlatChance(
+                                        this.enchantments.getOrThrow(Enchantments.FORTUNE),
+                                            0.0F, 0.05F, 0.10F, 0.20F
+                                        ).build()
+                                ))
                         )
             )
         );

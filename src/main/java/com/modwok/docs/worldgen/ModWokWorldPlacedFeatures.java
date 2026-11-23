@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ModWokWorldPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> GORANGE_CHICKEN_ORE_VEIN_PLACED_FEATURE =
+    public static final ResourceKey<PlacedFeature> GORANGE_CHICKEN_ORE_VEIN_PLACED_KEY =
         ResourceKey.create(
             Registries.PLACED_FEATURE,
             ModWok.id("gorange_chicken_ore_placed")
@@ -23,18 +23,14 @@ public class ModWokWorldPlacedFeatures {
     public static void configure(BootstrapContext<PlacedFeature> context) {
         HolderGetter<Feature> features = context.lookup(Registries.FEATURE);
         List<PlacementModifier> gorangeChickenOreVeinModifiers = List.of(
-            CountPlacement.of(1),
+            CountPlacement.of(3),
             BiomeFilter.biome(),
             InSquarePlacement.spread(),
-            HeightRangePlacement.of(
-                BiasedToBottomHeight.of(
-                    VerticalAnchor.BOTTOM, VerticalAnchor.absolute(0), 3
-                )
-            )
+            HeightRangePlacement.of(BiasedToBottomHeight.of(VerticalAnchor.BOTTOM, VerticalAnchor.absolute(0), 3))
         );
 
         context.register(
-            GORANGE_CHICKEN_ORE_VEIN_PLACED_FEATURE,
+            GORANGE_CHICKEN_ORE_VEIN_PLACED_KEY,
             new PlacedFeature(
                 features.getOrThrow(ModWokWorldFeatures.GORANGE_CHICKEN_ORE_VEIN_FEATURE_KEY),
                 gorangeChickenOreVeinModifiers
