@@ -34,7 +34,7 @@ public class ModWokWorldFeatures {
 
         context.register(
                 GORANGE_CHICKEN_ORE_VEIN_FEATURE_KEY,
-                new OreFeature(deepslateReplaceConfig, 10) // 10 is the blocks per vein
+                new OreFeature(deepslateReplaceConfig, 3) // 3 is the blocks per vein
         );
     }
 }

@@ -23,10 +23,10 @@ public class ModWokWorldPlacedFeatures {
     public static void configure(BootstrapContext<PlacedFeature> context) {
         HolderGetter<Feature> features = context.lookup(Registries.FEATURE);
         List<PlacementModifier> gorangeChickenOreVeinModifiers = List.of(
-            CountPlacement.of(3),
-            BiomeFilter.biome(),
+            CountPlacement.of(1),
             InSquarePlacement.spread(),
-            HeightRangePlacement.of(BiasedToBottomHeight.of(VerticalAnchor.BOTTOM, VerticalAnchor.absolute(0), 3))
+            HeightRangePlacement.of(BiasedToBottomHeight.of(VerticalAnchor.BOTTOM, VerticalAnchor.absolute(0), 3)),
+            BiomeFilter.biome()
         );
 
         context.register(

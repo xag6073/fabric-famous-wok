@@ -29,11 +29,11 @@ public class ModWok implements ModInitializer {
 		ModBlocks.initialize();
 		LOGGER.info("Hello Fabric world!");
 
-		// Spawns in Mountain biomes only
+		// Spawns everywhere in the overworld
 		BiomeModifications.addFeature(
-            BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN),
-            GenerationStep.Decoration.UNDERGROUND_ORES,
-            ModWokWorldPlacedFeatures.GORANGE_CHICKEN_ORE_VEIN_PLACED_KEY
+						BiomeSelectors.foundInOverworld(),
+						GenerationStep.Decoration.UNDERGROUND_ORES,
+						ModWokWorldPlacedFeatures.GORANGE_CHICKEN_ORE_VEIN_PLACED_KEY
 		);
 
 //		Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, ExampleMod.id("breaded_chicken_cut"), BreadedChickenCutsRecipe.SERIALIZER);
