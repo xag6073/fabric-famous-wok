@@ -16,6 +16,8 @@ public class ModItemIds {
     // ORE DROPS
     public static final ResourceKey<Item> GORANGE_CHICKEN_NUG_KEY = create("gorange_chicken_nug");
 
+    public static final ResourceKey<Item> EGG_DROP_SOUP_KEY = create("egg_drop_soup");
+
     public static ResourceKey<Item> create(String name) {
         // Create the item key.
         return ResourceKey.create(Registries.ITEM, ModWok.id(name));
