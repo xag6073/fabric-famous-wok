@@ -2,7 +2,7 @@ package com.modwok.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class ExampleModClient implements ClientModInitializer {
+public class ModWokClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {

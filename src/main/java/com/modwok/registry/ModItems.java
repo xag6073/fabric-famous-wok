@@ -17,11 +17,6 @@ import static vectorwing.farmersdelight.common.registry.ModItems.bowlFoodItem;
 public class ModItems {
 
     // FOOD_AND_DRINKS & INGREDIENTS
-    public static final Item EGG_DROP_SOUP = register(
-            ModItemIds.EGG_DROP_SOUP_KEY,
-            Item::new,
-            new Item.Properties().food(ModWokFoodValues.EGG_DROP_SOUP, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION)
-    );
     public static final Item BREADED_CHICKEN_CUTS = register(
             ModItemIds.BREADED_CHICKEN_CUTS,
             Item::new,
@@ -32,9 +27,18 @@ public class ModItems {
             Item::new,
             new Item.Properties()
     );
-    public static final Item LO_MEIN = register(ModItemIds.LO_MEIN_KEY,
-            properties -> new ConsumableItem(properties, true),
-            bowlFoodItem(ModWokFoodValues.LO_MEIN, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION));
+
+    // BOWL REQUIRED FOODS
+    public static final Item EGG_DROP_SOUP = register(
+        ModItemIds.EGG_DROP_SOUP_KEY,
+        properties -> new ConsumableItem(properties, true),
+        bowlFoodItem(ModWokFoodValues.EGG_DROP_SOUP, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION)
+    );
+
+    public static final Item LO_MEIN = register(
+        ModItemIds.LO_MEIN_KEY,
+        properties -> new ConsumableItem(properties, true),
+        bowlFoodItem(ModWokFoodValues.LO_MEIN, FoodValues.ConsumableValues.NOURISHMENT_SHORT_DURATION));
 
     // ORE DROPS
     public static final Item GORANGE_CHICKEN_NUG = register(

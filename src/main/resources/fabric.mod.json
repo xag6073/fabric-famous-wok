@@ -19,7 +19,7 @@
 			"com.modwok.ModWok"
 		],
 		"client": [
-			"com.modwok.client.ExampleModClient"
+			"com.modwok.client.ModWokClient"
 		],
 		"fabric-datagen": [
 			"com.modwok.docs.datagen.ModWokDataGenerator"
